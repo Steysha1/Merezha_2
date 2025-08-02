@@ -11,7 +11,14 @@ users = {}
 
 @app.route('/')
 def index():
-    return 'Сервер працює!'
+    return 'Сервер відповідає!'
+
+@socketio.on('jame')
+def jame0 ():
+    print("Успішно!")
+    send('Виконано успішно! =')
+
+
 
 @socketio.on('connect')
 def handle_connect():
